@@ -22,7 +22,7 @@
 
 import UIKit
 
-private var UITableViewHeightKey = 10
+private var UITableViewCellHeightKey = 0
 
 extension UITableView {
 
@@ -30,7 +30,7 @@ extension UITableView {
                                         style: UITableViewCell.CellStyle = .default,
                                         configuration: (T)->() ) -> CGFloat {
         
-        var dict = objc_getAssociatedObject(self, &UITableViewHeightKey) as? [String : UIView]
+        var dict = objc_getAssociatedObject(self, &UITableViewCellHeightKey) as? [String : UIView]
         if dict == nil {
             dict = [String : UIView]()
         }
@@ -50,7 +50,7 @@ extension UITableView {
             }
             view!.addSubview(cell!)
             dict?[className] = view
-            objc_setAssociatedObject(self, &UITableViewHeightKey, dict, .OBJC_ASSOCIATION_RETAIN_NONATOMIC)
+            objc_setAssociatedObject(self, &UITableViewCellHeightKey, dict, .OBJC_ASSOCIATION_RETAIN_NONATOMIC)
         }
         
         if let v = view, let cell: T = v.subviews.first as? T {
