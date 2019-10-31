@@ -64,11 +64,14 @@ extension UITableView {
             
             v.frame = CGRect(x: 0, y: 0, width: self.frame.width, height: 0.0)
             cell.frame = CGRect(x: 0, y: 0, width: self.frame.width, height: 0.0)
+            
             configuration(cell)
+            
             v.setNeedsUpdateConstraints()
             v.setNeedsLayout()
             v.layoutIfNeeded()
             v.setNeedsDisplay()
+            
             return cell.contentView.subviews.max {$0.frame.maxY < $1.frame.maxY}?.frame.maxY ?? 0.0
         } else {
             return 0.0
