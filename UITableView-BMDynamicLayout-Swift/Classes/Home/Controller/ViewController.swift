@@ -31,17 +31,30 @@ extension ViewController : UITableViewDelegate, UITableViewDataSource {
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        var cell: TableViewCell? = tableView.dequeueReusableCell(withIdentifier: "a") as? TableViewCell
-        if cell == nil {
-            cell = UINib.init(nibName: "TableViewCell", bundle: nil).instantiate(withOwner: nil, options: nil)[0] as? TableViewCell
-        }
-        cell?.testLabel.text = dataArray[indexPath.row]
-        return cell!;
+        let cell: TableViewCell = TableViewCell.tableViewCell(tableView)
+        cell.testLabel.text = dataArray[indexPath.row]
+        return cell
     }
-    
+
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return tableView.cellHeight(cellClass: TableViewCell.self) { (cell) in
             cell.testLabel.text = dataArray[indexPath.row]
         }
+    }
+
+    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        return HeaderView.tableViewHeaderFooterView(tableView)
+    }
+    
+    func tableView(_ tableView: UITableView, viewForFooterInSection section: Int) -> UIView? {
+        return FooterView.tableViewHeaderFooterView(tableView)
+    }
+    
+    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        return 80
+    }
+
+    func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
+        return 50
     }
 }

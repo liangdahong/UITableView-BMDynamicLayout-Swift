@@ -20,12 +20,9 @@
 //    OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 //    SOFTWARE.
 
-
 import UIKit
 
-var UITableViewHeightKey = 10
-
-public typealias ConfigurationCellClosure = ((UITableViewCell) -> ())
+private var UITableViewHeightKey = 10
 
 extension UITableView {
 

@@ -16,6 +16,12 @@
 		050EE4FE236A91A9004B37A1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 050EE4F9236A91A9004B37A1 /* ViewController.swift */; };
 		050EE4FF236A91A9004B37A1 /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 050EE4FC236A91A9004B37A1 /* TableViewCell.swift */; };
 		050EE500236A91A9004B37A1 /* TableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 050EE4FD236A91A9004B37A1 /* TableViewCell.xib */; };
+		0511C4E1236AAC2500821F89 /* FooterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0511C4E0236AAC2500821F89 /* FooterView.swift */; };
+		0511C4E3236AAC3700821F89 /* HeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0511C4E2236AAC3700821F89 /* HeaderView.swift */; };
+		0511C4E5236AAC3E00821F89 /* FooterView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0511C4E4236AAC3E00821F89 /* FooterView.xib */; };
+		0511C4E7236AAC4500821F89 /* HeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0511C4E6236AAC4500821F89 /* HeaderView.xib */; };
+		05AACC0E236A937600DF39C2 /* UITableViewCell+BMDynamicLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05AACC0D236A937600DF39C2 /* UITableViewCell+BMDynamicLayout.swift */; };
+		05AACC12236AA5CE00DF39C2 /* UITableViewHeaderFooterView+BMDynamicLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05AACC11236AA5CE00DF39C2 /* UITableViewHeaderFooterView+BMDynamicLayout.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +36,12 @@
 		050EE4F9236A91A9004B37A1 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		050EE4FC236A91A9004B37A1 /* TableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
 		050EE4FD236A91A9004B37A1 /* TableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TableViewCell.xib; sourceTree = "<group>"; };
+		0511C4E0236AAC2500821F89 /* FooterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FooterView.swift; sourceTree = "<group>"; };
+		0511C4E2236AAC3700821F89 /* HeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderView.swift; sourceTree = "<group>"; };
+		0511C4E4236AAC3E00821F89 /* FooterView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FooterView.xib; sourceTree = "<group>"; };
+		0511C4E6236AAC4500821F89 /* HeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HeaderView.xib; sourceTree = "<group>"; };
+		05AACC0D236A937600DF39C2 /* UITableViewCell+BMDynamicLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableViewCell+BMDynamicLayout.swift"; sourceTree = "<group>"; };
+		05AACC11236AA5CE00DF39C2 /* UITableViewHeaderFooterView+BMDynamicLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableViewHeaderFooterView+BMDynamicLayout.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,6 +88,8 @@
 			isa = PBXGroup;
 			children = (
 				050EE4F6236A9140004B37A1 /* UITableView+BMDynamicLayout.swift */,
+				05AACC0D236A937600DF39C2 /* UITableViewCell+BMDynamicLayout.swift */,
+				05AACC11236AA5CE00DF39C2 /* UITableViewHeaderFooterView+BMDynamicLayout.swift */,
 			);
 			path = Sources;
 			sourceTree = "<group>";
@@ -119,6 +133,10 @@
 			isa = PBXGroup;
 			children = (
 				050EE4FB236A91A9004B37A1 /* TableViewCell */,
+				0511C4E2236AAC3700821F89 /* HeaderView.swift */,
+				0511C4E6236AAC4500821F89 /* HeaderView.xib */,
+				0511C4E0236AAC2500821F89 /* FooterView.swift */,
+				0511C4E4236AAC3E00821F89 /* FooterView.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -193,6 +211,8 @@
 				050EE4E3236A905E004B37A1 /* LaunchScreen.storyboard in Resources */,
 				050EE500236A91A9004B37A1 /* TableViewCell.xib in Resources */,
 				050EE4E0236A905E004B37A1 /* Assets.xcassets in Resources */,
+				0511C4E7236AAC4500821F89 /* HeaderView.xib in Resources */,
+				0511C4E5236AAC3E00821F89 /* FooterView.xib in Resources */,
 				050EE4DE236A905D004B37A1 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -205,9 +225,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				050EE4FF236A91A9004B37A1 /* TableViewCell.swift in Sources */,
+				0511C4E3236AAC3700821F89 /* HeaderView.swift in Sources */,
 				050EE4F2236A90F0004B37A1 /* AppDelegate.swift in Sources */,
 				050EE4F7236A9140004B37A1 /* UITableView+BMDynamicLayout.swift in Sources */,
 				050EE4FE236A91A9004B37A1 /* ViewController.swift in Sources */,
+				05AACC12236AA5CE00DF39C2 /* UITableViewHeaderFooterView+BMDynamicLayout.swift in Sources */,
+				0511C4E1236AAC2500821F89 /* FooterView.swift in Sources */,
+				05AACC0E236A937600DF39C2 /* UITableViewCell+BMDynamicLayout.swift in Sources */,
 				050EE4F3236A90F0004B37A1 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
