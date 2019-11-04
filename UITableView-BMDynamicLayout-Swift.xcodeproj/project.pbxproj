@@ -55,6 +55,24 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0452F29A2370946600055A6C /* FooterView */ = {
+			isa = PBXGroup;
+			children = (
+				0511C4E0236AAC2500821F89 /* FooterView.swift */,
+				0511C4E4236AAC3E00821F89 /* FooterView.xib */,
+			);
+			path = FooterView;
+			sourceTree = "<group>";
+		};
+		0452F29B2370946800055A6C /* HeaderView */ = {
+			isa = PBXGroup;
+			children = (
+				0511C4E2236AAC3700821F89 /* HeaderView.swift */,
+				0511C4E6236AAC4500821F89 /* HeaderView.xib */,
+			);
+			path = HeaderView;
+			sourceTree = "<group>";
+		};
 		050EE4CA236A905D004B37A1 = {
 			isa = PBXGroup;
 			children = (
@@ -132,11 +150,9 @@
 		050EE4FA236A91A9004B37A1 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				0452F29B2370946800055A6C /* HeaderView */,
+				0452F29A2370946600055A6C /* FooterView */,
 				050EE4FB236A91A9004B37A1 /* TableViewCell */,
-				0511C4E2236AAC3700821F89 /* HeaderView.swift */,
-				0511C4E6236AAC4500821F89 /* HeaderView.xib */,
-				0511C4E0236AAC2500821F89 /* FooterView.swift */,
-				0511C4E4236AAC3E00821F89 /* FooterView.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -379,6 +395,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = VG78JT6CG8;
 				INFOPLIST_FILE = "UITableView-BMDynamicLayout-Swift/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -397,6 +414,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = VG78JT6CG8;
 				INFOPLIST_FILE = "UITableView-BMDynamicLayout-Swift/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

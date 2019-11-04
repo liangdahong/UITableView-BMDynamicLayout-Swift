@@ -24,6 +24,15 @@ import UIKit
 
 private var UITableViewCellHeightKey = 0
 
+private extension UIView {
+    func layoutGetFrame() {
+        self.setNeedsUpdateConstraints()
+        self.setNeedsLayout()
+        self.layoutIfNeeded()
+        self.setNeedsDisplay()
+    }
+}
+
 extension UITableView {
 
     func cellHeight<T: UITableViewCell>(cellClass clas: T.Type,
@@ -57,20 +66,14 @@ extension UITableView {
 
             let tempView : UIView = self.superview != nil ? self.superview! : self
 
-            tempView.setNeedsUpdateConstraints()
-            tempView.setNeedsLayout()
-            tempView.layoutIfNeeded()
-            tempView.setNeedsDisplay()
-            
+            tempView.layoutGetFrame()
+
             v.frame = CGRect(x: 0, y: 0, width: self.frame.width, height: 0.0)
             cell.frame = CGRect(x: 0, y: 0, width: self.frame.width, height: 0.0)
             
             configuration(cell)
-            
-            v.setNeedsUpdateConstraints()
-            v.setNeedsLayout()
-            v.layoutIfNeeded()
-            v.setNeedsDisplay()
+
+            v.layoutGetFrame()
             
             return cell.contentView.subviews.max {$0.frame.maxY < $1.frame.maxY}?.frame.maxY ?? 0.0
         } else {

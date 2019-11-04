@@ -35,7 +35,7 @@ extension UITableViewHeaderFooterView {
         } else {
             let path = Bundle.main.path(forResource: className, ofType: "nib")
             if ((path?.count) != nil) {
-                view = UINib.init(nibName: className, bundle: nil).instantiate(withOwner: nil, options: nil).first as! T
+                view = UINib(nibName: className, bundle: nil).instantiate(withOwner: nil, options: nil).first as! T
                 view?.setValue(className, forKey: "reuseIdentifier")
             } else {
                 view = self.init(reuseIdentifier: className)
