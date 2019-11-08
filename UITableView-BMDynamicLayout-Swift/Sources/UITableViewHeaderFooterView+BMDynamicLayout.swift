@@ -23,7 +23,7 @@
 import UIKit
 
 extension UITableViewHeaderFooterView {
-
+    
     class func tableViewHeaderFooterView<T: UITableViewHeaderFooterView>(_ tableView: UITableView) -> T {
 
         let className = String(NSStringFromClass(self).split(separator: ".").last!)

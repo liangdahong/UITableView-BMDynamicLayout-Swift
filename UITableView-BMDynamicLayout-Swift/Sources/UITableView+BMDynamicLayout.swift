@@ -63,7 +63,7 @@ extension UITableView {
         }
         
         if let v = view, let cell: T = v.subviews.first as? T {
-
+            
             let tempView : UIView = self.superview != nil ? self.superview! : self
 
             tempView.layoutGetFrame()
